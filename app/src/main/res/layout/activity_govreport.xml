@@ -4,16 +4,17 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/bc"
     tools:context=".govreport">
 
     <com.google.android.material.appbar.AppBarLayout
         android:id="@+id/appBarLayout3"
         android:layout_width="match_parent"
         android:layout_height="85dp"
-        android:layout_marginBottom="322dp"
         android:background="@color/pista"
         android:gravity="bottom"
 
+        app:layout_constraintBottom_toTopOf="@+id/textView5"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
@@ -32,7 +33,35 @@
                 android:padding="16dp"
                 android:src="@drawable/baseline_arrow_back_ios_24" />
 
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Govrement Report"
+                android:textColor="@color/black"
+                android:textSize="25dp"
+                android:textStyle="bold" />
 
         </androidx.appcompat.widget.Toolbar>
     </com.google.android.material.appbar.AppBarLayout>
+
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="145dp"
+        android:text="City of Greenhaven - Garbage Bin Utilization Report - February 2024\n\n
+Executive Summary: This report analyzes the current state of garbage bin utilization in Greenhaven, identifying challenges and proposing solutions to improve efficiency, waste diversion, and public satisfaction.\n\nIntroduction: Effective garbage bin management is crucial for a clean and healthy community. This report examines resident usage, overflow issues, and recycling contamination within Greenhaven's residential waste system.
+
+\n\nCurrent State:
+Greenhaven utilizes 10,000 standardized 35-gallon bins across 5,000 households.
+Data shows bin overflow occurring twice weekly in 20% of households, primarily due to bulky items or high waste generation.
+Recycling contamination rates reach 30%, impacting processing costs and environmental benefits."
+        android:textSize="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/appBarLayout3"
+        app:layout_constraintVertical_bias="0.0" />
 </androidx.constraintlayout.widget.ConstraintLayout>

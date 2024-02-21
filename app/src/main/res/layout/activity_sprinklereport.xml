@@ -4,13 +4,13 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/bc"
     tools:context=".sprinklereport">
 
     <com.google.android.material.appbar.AppBarLayout
         android:id="@+id/appBarLayout3"
-        android:layout_width="match_parent"
+        android:layout_width="0dp"
         android:layout_height="85dp"
-        android:layout_marginBottom="322dp"
         android:background="@color/pista"
         android:gravity="bottom"
         app:layout_constraintEnd_toEndOf="parent"
@@ -31,8 +31,46 @@
                 android:padding="16dp"
                 android:src="@drawable/baseline_arrow_back_ios_24" />
 
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Sprinkle Report"
+                android:textColor="@color/black"
+                android:textSize="25dp"
+                android:textStyle="bold" />
+
 
         </androidx.appcompat.widget.Toolbar>
     </com.google.android.material.appbar.AppBarLayout>
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="361dp"
+        android:layout_height="469dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="22dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="10dp"
+        android:text="Date and Time: February 14, 2024, 10:00 AM
+
+Location: 123 Main Street, Cityville, State, Zip Code
+
+Weather Conditions:
+
+Temperature: 20°C
+Humidity: 65%
+Wind Speed/Direction: 5 mph, North
+Type of Sprinkler System: Automated sprinkler system
+
+Duration of Sprinkling: 30 minutes
+
+Reason for Sprinkling:
+The sprinkle operation was conducted to control dust accumulation around the dustbin located at 123 Main Street. Due to the dry weather conditions and increased foot traffic in the area, dust had been accumulating around the dustbin, leading to potential health and environmental concerns. Sprinkling was deemed necessary to mitigate dust dispersion and improve air quality in the vicinity."
+        android:textSize="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/appBarLayout3"
+        app:layout_constraintVertical_bias="0.36" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

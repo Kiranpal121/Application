@@ -8,7 +8,8 @@ import android.widget.TextView
 
 class Report : AppCompatActivity() {
 
-    private lateinit var backbutton : ImageView
+    private lateinit var backbutton: ImageView
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_report)
@@ -19,6 +20,7 @@ class Report : AppCompatActivity() {
         val overallWasteTextView: TextView = findViewById(R.id.wastereport)
         val weatherTextView: TextView = findViewById(R.id.weatherreport)
         val governmentSchemeTextView: TextView = findViewById(R.id.govreport)
+        backbutton = findViewById(R.id.backButton2)
 
         binStatusTextView.setOnClickListener {
             val intent = Intent(this, Binreport::class.java)
@@ -38,24 +40,24 @@ class Report : AppCompatActivity() {
         overallWasteTextView.setOnClickListener {
             val intent = Intent(this, wastemangreport::class.java)
             startActivity(intent)
+        }
 
-            weatherTextView.setOnClickListener {
-                val intent = Intent(this, Weatherreport::class.java)
-                startActivity(intent)
-            }
+        weatherTextView.setOnClickListener {
+            val intent = Intent(this, Weatherreport::class.java)
+            startActivity(intent)
+        }
 
-            governmentSchemeTextView.setOnClickListener {
-                val intent = Intent(this, govreport::class.java)
-                startActivity(intent)
+        governmentSchemeTextView.setOnClickListener {
+            val intent = Intent(this, govreport::class.java)
+            startActivity(intent)
+        }
 
-            }
-
-            backbutton.setOnClickListener {
-                // Navigate back to the main activity
-                val intent = Intent(this, MainActivity::class.java)
-                startActivity(intent)
-                finish() // Optional, finish the current activity to prevent going back to it
-            }
+        backbutton.setOnClickListener {
+            // Navigate back to the main activity
+            val intent = Intent(this, MainActivity::class.java)
+            startActivity(intent)
+            // Optional, finish the current activity to prevent going back to it
+            finish()
         }
     }
 }

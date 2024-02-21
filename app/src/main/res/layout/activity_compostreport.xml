@@ -4,17 +4,16 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-
-
+    android:background="@drawable/bc"
     tools:context=".Compostreport">
 
     <com.google.android.material.appbar.AppBarLayout
         android:id="@+id/appBarLayout3"
         android:layout_width="match_parent"
         android:layout_height="85dp"
-        android:layout_marginBottom="322dp"
         android:background="@color/pista"
         android:gravity="bottom"
+        app:layout_constraintBottom_toTopOf="@+id/textView4"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
@@ -33,9 +32,33 @@
                 android:padding="16dp"
                 android:src="@drawable/baseline_arrow_back_ios_24" />
 
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Compost Rreport"
+                android:textColor="@color/black"
+                android:textSize="25dp"
+                android:textStyle="bold" />
 
         </androidx.appcompat.widget.Toolbar>
     </com.google.android.material.appbar.AppBarLayout>
 
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="105dp"
+        android:text="Date: February 14, 2024\n\nSource: Backyard composter\n(kitchen scraps and yard waste\n\nType of compost: Mixed organic (fruits, vegetables, coffee grounds, leaves, grass clippings)\n\nVolume: 1 cubic yard\n\nMoisture content: 50%\n\nTemperature: 75°F (24°C)\n pH level: 7.2 (neutral)\nNutrient content: Nitrogen (N): 1.5%\nPhosphorus (P): 0.8%\nPotassium (K): 2.0%\nOrganic matter content: 65%\nPresence of contaminants: None detected
+
+        Maturity level: Mature and ready to use\nParticle size: Fine to medium"
+        android:textSize="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/appBarLayout3"
+        app:layout_constraintVertical_bias="0.0" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

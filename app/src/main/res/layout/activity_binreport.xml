@@ -1,38 +1,66 @@
-<?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/bc"
     tools:context=".Binreport">
 
+    <!-- AppBarLayout with Toolbar -->
     <com.google.android.material.appbar.AppBarLayout
         android:id="@+id/appBarLayout2"
-        android:layout_width="0dp"
+        android:layout_width="match_parent"
         android:layout_height="85dp"
+        android:layout_marginBottom="4dp"
         android:background="@color/pista"
         android:gravity="bottom"
+        app:layout_constraintBottom_toTopOf="@+id/textView3"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
         <androidx.appcompat.widget.Toolbar
-            android:id="@+id/toolbar7"
+            android:id="@+id/toolbar3"
             android:layout_width="match_parent"
             android:layout_height="?attr/actionBarSize"
             android:background="@color/pista"
             app:layout_scrollFlags="scroll|enterAlways">
 
-            <!-- Add back button to the Toolbar -->
+            <!-- Back button -->
             <ImageView
-                android:id="@+id/backButton"
+                android:id="@+id/backButton2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:padding="16dp"
                 android:src="@drawable/baseline_arrow_back_ios_24" />
 
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Bin Report"
+                android:textColor="@color/black"
+                android:textSize="25dp"
+                android:textStyle="bold" />
+
         </androidx.appcompat.widget.Toolbar>
 
     </com.google.android.material.appbar.AppBarLayout>
+
+
+    <!-- Description TextView -->
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginBottom="270dp"
+        android:padding="16dp"
+        android:text="In 2022-23, BMC collected 6,385 metric tonnes of garbage per day, which is 15% more than in 2021-22.\n\nIndia generates 62 million tonnes of waste annually, but only 70% is collected.\n\nOnly 12 million tonnes of waste is treated, and 31 million tonnes end up in landfills.\n
+The World Bank projects that global waste generation will increase from 2.24 billion tonnes in 2020 to nearly 3.88 billion tonnes by 2050."
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/appBarLayout2" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

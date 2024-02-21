@@ -14,7 +14,7 @@ class Binreport : AppCompatActivity() {
 
 
 
-        backbutton = findViewById(R.id.backButton)
+        backbutton = findViewById(R.id.backButton2)
 
 
         backbutton.setOnClickListener {
